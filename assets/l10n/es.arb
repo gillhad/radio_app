@@ -1,6 +1,6 @@
 {
     "@@locale":"es",
-
-    "language_option_1":"Español",
-    "language_option_2":"Inglés"
-}
+    "home_title":"App Radio",
+    "home_filter":"Filtros",
+    "home_statios":"¡Dale caña!"
+    }
