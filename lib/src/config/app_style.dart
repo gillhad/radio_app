@@ -18,6 +18,11 @@ static var mainTheme = ThemeData(
   appBarTheme: AppBarTheme(
     backgroundColor: AppColors.background,
     
+  ),
+  elevatedButtonTheme: ElevatedButtonThemeData(
+    style: ButtonStyle(
+      textStyle: MaterialStatePropertyAll(textTheme.bodyMedium!.copyWith(color: AppColors.onPrimaryContainer ))
+    )
   )
 );
 
@@ -26,7 +31,7 @@ static var textTheme = TextTheme(
   bodyMedium: TextStyle(fontSize: 14,color: AppColors.onBackground),
   bodyLarge: TextStyle(fontSize: 18,color: AppColors.onBackground),
   labelSmall: TextStyle(fontSize: 10, color: AppColors.onPrimaryContainer),
-  
+
 );
 
 }

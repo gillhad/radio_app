@@ -1,6 +1,12 @@
 {
     "@@locale":"es",
     "home_title":"App Radio",
-    "home_filter":"Filtros",
-    "home_statios":"¡Dale caña!"
+    "home_title_loading":"Estamos buscando tus radios favoritas",
+    "home_title_loading_filter":"¡Parece que ninguna radio coincide con tu búsqueda! Prueba otra búsqueda",
+    "home_filter":"Lo más se escuchado",
+    "home_go":"¡Dale caña!",
+    "home_stations_subtitle":"Las mejores cadenas siempre actualizadas",
+    
+    "play_radio_title":"Está sonando",
+    "play_random":"¡Prueba algo nuevo!"
     }

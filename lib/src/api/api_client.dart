@@ -2,32 +2,47 @@ import 'package:dio/dio.dart';
 
 class ApiClient{
 
-final options = BaseOptions(
-  baseUrl: "http://de1.api.radio-browser.info/json/stations",
+final dio = Dio(BaseOptions(
+  baseUrl: "https://de1.api.radio-browser.info/json/stations",
   connectTimeout: Duration(seconds: 5),
   receiveTimeout: Duration(seconds: 3)
-);
-
-final dio = Dio();
+));
 
 
 
-Future getRadioStations(String country,List<String>? tags) async{
+
+
+Future getRadioStations(String country, {int? limit}) async{
     Map<String,dynamic> params = {
       "country":country,
       "order":"votes",
+      "limit": limit ?? 1000,
+      "reverse":"true"
     };
-    params.putIfAbsent("tags", () => tags);
-    var response = await requestGet("/search", tags);
+    var response = await requestGet("/search",params: params);
+
+    return response;
 }
 
 
 
-requestGet(String path, params){
-    var response = dio.get(path, queryParameters: params);
+Future requestGet(String path,{Map<String,dynamic>? params})async {
+  print("inicia la request");
+  try{
+    var response = await dio.get(
+      path?? "",
+      queryParameters: params,
+      options: Options(
+      responseType: ResponseType.json,
+      )
+      );
 
     print(response);
-    return response;
+    print(response.runtimeType);
+    return response.data;
+  }catch(e){
+    print(e);
+  }
 }
 
 

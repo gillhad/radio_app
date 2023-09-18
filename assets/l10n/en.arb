@@ -1,3 +1,12 @@
 {
-    "@@locale":"en"
-}
+    "@@locale":"en",
+     "home_title":"App Radio",
+      "home_title_loading":"We are looking for your favourite stations",
+    "home_title_loading_filter":"¡Seems that there is no match! Try a new search",
+    "home_filter":"The most listened",
+    "home_go":"¡Let's rock!",
+    "home_stations_subtitle":"The best stations, always updated",
+   
+   "play_radio_title":"Now live",
+    "play_random":"¡Try something new!"   
+    }
